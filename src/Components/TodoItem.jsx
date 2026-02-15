@@ -29,27 +29,27 @@ export function TodoItem({ todo, onToggle, onEdit, onDelete }) {
 
   if (isEditing) {
     return (
-      <li className="rounded-xl border border-zinc-600 bg-zinc-800 shadow-sm overflow-hidden">
+      <li className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
         <div className="flex gap-2 p-3">
           <input
             type="text"
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 rounded-lg border border-zinc-600 bg-zinc-700 text-zinc-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="flex-1 rounded-lg border border-slate-300 bg-white text-slate-800 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             autoFocus
           />
           <button
             type="button"
             onClick={handleSave}
-            className="rounded-lg bg-amber-500 text-zinc-900 px-3 py-2 text-sm font-medium hover:bg-amber-400"
+            className="rounded-lg bg-blue-500 text-white px-3 py-2 text-sm font-medium hover:bg-blue-600"
           >
             Kaydet
           </button>
           <button
             type="button"
             onClick={handleCancel}
-            className="rounded-lg bg-zinc-600 text-zinc-200 px-3 py-2 text-sm font-medium hover:bg-zinc-500"
+            className="rounded-lg bg-slate-200 text-slate-700 px-3 py-2 text-sm font-medium hover:bg-slate-300"
           >
             İptal
           </button>
@@ -59,17 +59,17 @@ export function TodoItem({ todo, onToggle, onEdit, onDelete }) {
   }
 
   return (
-    <li className="rounded-xl border border-zinc-600 bg-zinc-800 shadow-sm overflow-hidden">
+    <li className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
       <div className="flex items-center gap-3 p-3">
         <input
           type="checkbox"
           checked={todo.completed}
           onChange={() => onToggle(todo.id)}
-          className="rounded border-zinc-500 text-amber-400 focus:ring-amber-400 bg-zinc-700"
+          className="rounded border-slate-300 text-blue-500 focus:ring-blue-500 bg-white"
         />
         <span
-          className={`flex-1 text-zinc-200 ${
-            todo.completed ? 'line-through text-zinc-500' : ''
+          className={`flex-1 text-slate-800 ${
+            todo.completed ? 'line-through text-slate-500' : ''
           }`}
         >
           {todo.text}
@@ -78,14 +78,14 @@ export function TodoItem({ todo, onToggle, onEdit, onDelete }) {
           <button
             type="button"
             onClick={handleStartEdit}
-            className="rounded-lg bg-amber-900/40 text-amber-200 px-3 py-1.5 text-sm font-medium hover:bg-amber-900/60"
+            className="rounded-lg bg-blue-100 text-blue-700 px-3 py-1.5 text-sm font-medium hover:bg-blue-200"
           >
             Düzenle
           </button>
           <button
             type="button"
             onClick={() => onDelete(todo.id)}
-            className="rounded-lg bg-red-900/40 text-red-300 px-3 py-1.5 text-sm font-medium hover:bg-red-900/60"
+            className="rounded-lg bg-red-100 text-red-700 px-3 py-1.5 text-sm font-medium hover:bg-red-200"
           >
             Sil
           </button>

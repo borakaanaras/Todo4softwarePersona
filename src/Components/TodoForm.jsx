@@ -19,12 +19,12 @@ export function TodoForm({ onAdd, placeholder = 'Yeni görev yazın...' }) {
         onChange={(e) => setInputText(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
         placeholder={placeholder}
-        className="flex-1 rounded-xl border border-zinc-600 bg-zinc-800 text-zinc-100 placeholder-zinc-500 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+        className="flex-1 rounded-xl border border-slate-300 bg-white text-slate-800 placeholder-slate-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
       />
       <button
         type="button"
         onClick={handleSubmit}
-        className="rounded-xl bg-amber-500 text-zinc-900 px-5 py-3 font-semibold hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-zinc-900"
+        className="rounded-xl bg-blue-500 text-white px-5 py-3 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white"
       >
         Ekle
       </button>

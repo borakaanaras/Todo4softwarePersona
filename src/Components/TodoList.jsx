@@ -15,7 +15,7 @@ export function TodoList({ todos, filter, onToggle, onEdit, onDelete }) {
 
   if (filtered.length === 0) {
     return (
-      <p className="text-center py-8 text-zinc-400 text-sm">
+      <p className="text-center py-8 text-slate-500 text-sm">
         {filter === 'active' && 'Aktif görev yok.'}
         {filter === 'completed' && 'Tamamlanan görev yok.'}
       </p>
